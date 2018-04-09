@@ -35,7 +35,7 @@ infile_correct = infile['5'].values
 infile_correct = infile_correct.reshape(-1,1)
 prediction = reg.predict(infile_correct)
 
-f = open('out.tsv', 'w')
+f = open('dev-0/out.tsv', 'w')
 
 for i in range(0, len(infile_correct)):
     f.write(str(prediction[i]) + '\n')

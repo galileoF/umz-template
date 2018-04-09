@@ -39,12 +39,12 @@ b = model.intercept_
 
 print('multi variable model: {0}, {1}, {2}'.format(a[0],a[1],b))
 
-infile = pd.read_csv('dev-0/in.tsv', sep='\t', names=['1','2','3','4','5'])
+infile = pd.read_csv('test-A/in.tsv', sep='\t', names=['1','2','3','4','5'])
 infile_correct = infile['5'].values
 infile_correct = infile_correct.reshape(-1,1)
 prediction = reg.predict(pd.DataFrame(infile, columns=['5','2']))
 
-f = open('dev-0/out.tsv', 'w')
+f = open('test-A/out.tsv', 'w')
 
 for i in range(0, len(infile_correct)):
     f.write(str(prediction[i]) + '\n')
