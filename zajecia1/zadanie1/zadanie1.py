@@ -2,10 +2,14 @@
 
 import pandas as pd
 
-flats = pd.read_scv('train/train.tsv', sep = '\t', 
-        names = ['price', 'isNew', 'rooms', 'floor', 'location', 'sqrMeters']
+flats = pd.read_csv('train/train.tsv', sep = '\t', 
+        names = ['price', 'isNew', 'rooms', 'floor', 'location', 'sqrMeters'])
 
-flts_mean = flats['price'].pd.mean()
+infile = pd.read_csv('dev-0/in.tsv', sep='\t')
+f = open('dev-0/out.tsv', 'w')
+for i in range (0,len(infile)):
+    f.write(str(flats.price.mean()) + '\n')
 
-print(flats_mean)
+f.close()
+
 
