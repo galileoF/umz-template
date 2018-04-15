@@ -30,10 +30,19 @@ plt.xlabel('sqrMetres')
 plt.ylabel('price')
 plt.show() 
 
+#Z = flats['sqrMetres','floor']
+
+model2 = reg.fit(pd.DataFrame(flats, columns=['sqrMetres','floor']),flats['price'])
+
+a = model2.coef_
+b = model.intercept_
+
+print('multi variable model: {0}, {1}, {2}'.format(a[0],a[1],b))
+
 infile = pd.read_csv('dev-0/in.tsv', sep='\t', names=['1','2','3','4','5'])
 infile_correct = infile['5'].values
 infile_correct = infile_correct.reshape(-1,1)
-prediction = reg.predict(infile_correct)
+prediction = reg.predict(pd.DataFrame(infile, columns=['5','2']))
 
 f = open('dev-0/out.tsv', 'w')
 
