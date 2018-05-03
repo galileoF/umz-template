@@ -16,12 +16,23 @@ def get_sensivity(test, predictions_list):
 
 
 def get_specifity(test, predictions_list):
+    actually_email = sum([1 for x in test if not x.is_spam])
+    TN = len([1 for x, y in zip(test, predictions_list)
+              if (y == False and not x.is_spam)])
+    return TN / actually_email
+
+
     # TO TRZEBA NAPISAĆ (przekleić z get_sensivity i zmienić jedną linijkę zgodnie z
     # definicją specifity
     pass
 
 
 def get_precision(test, predictions_list):
+    all = sum(predictions_list)
+    TP = len([1 for x, y in zip(test, predictions_list)
+              if (y == True and x.is_spam)])
+    return TP / all
+
     # JW
     pass
 
