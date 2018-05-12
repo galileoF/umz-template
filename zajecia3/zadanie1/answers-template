@@ -3,44 +3,44 @@ lista najczęstszych słów dla ham:
 lista najczęstszych słów dla spam:
 
 zero rule:
-accuracy:
-sensivity:
-specifity
-precision:
+accuracy: 0.4973309608540925
+sensivity: 1.0
+specifity 0.0
+precision: 0.4973309608540925
 
 
 Bayes
-accuracy:
-sensivity:
-specifity
-precision:
+accuracy: 0.8288849347568209
+sensivity: 0.6739884393063584
+specifity 0.9920828258221681
+precision: 0.9889737065309584
 
 
 
 Bayes + stemmer lancester:
-accuracy:
-sensivity:
-specifity
-precision:
+accuracy: 0.8508303677342823
+sensivity: 0.7252808988764045
+specifity 0.9912060301507538
+precision: 0.989272030651341
 
 
 Bayes + stemmer porter:
-accuracy:
-sensivity:
-specifity
-precision:
+accuracy: 0.8570581257413997
+sensivity: 0.7296976882039122
+specifity 0.9845697329376855
+precision: 0.979315831344471
 
 Bayes + stemmer snowball:
-accuracy:
-sensivity:
-specifity
-precision:
+accuracy: 0.8327402135231317
+sensivity: 0.6861063464837049
+specifity 0.9907578558225508
+precision: 0.9876543209876543
 
 
 Bayes + laplac:
-alfa:
-beta:
-accuracy:
-sensivity:
-specifity
-precision:
+alfa: 0.1
+beta: 0.5
+accuracy: 0.8626927639383155
+sensivity: 0.7332556785090274
+specifity 0.9969788519637462
+precision: 0.9960443037974683
