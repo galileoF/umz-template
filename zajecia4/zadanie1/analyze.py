@@ -26,7 +26,7 @@ def show_plot():
     graph.view()
 
 
-clf = tree.DecisionTreeClassifier()
+clf = tree.DecisionTreeClassifier(presort=True, max_depth=4)
 clf = clf.fit(train_X, train_Y)
 show_plot()
 

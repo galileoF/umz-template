@@ -11,3 +11,50 @@ TEST SET- MAX DEPTH 4
 accuracy:0.72
 
 YOUR OWN TREE PARAMETERS:
+
+TRAIN SET- MAX LEAF NODES 6
+accuracy:0.73
+
+TEST SET- MAX LEAF NODES 6
+accuracy:0.72
+
+-----------------------------
+
+TRAIN SET- CRITERION 'entropy', MIN SAMPLES SPLIT 3
+accuracy:0.99
+
+TEST SET- CRITERION 'entropy', MIN SAMPLES SPLIT 3
+accuracy:0.59
+
+-----------------------------
+
+TRAIN SET- CRITERION 'entropy', MIN SAMPLES SPLIT 4
+accuracy:0.98
+
+TEST SET- CRITERION 'entropy', MIN SAMPLES SPLIT 4
+accuracy:0.59
+
+-----------------------------
+
+TRAIN SET- MIN WEIGHT FRACTION LEAF 0.1
+accuracy:0.71
+
+TEST SET- MIN WEIGHT FRACTION LEAF 0.1
+accuracy:0.55
+
+-----------------------------
+
+TRAIN SET- MIN WEIGHT FRACTION LEAF 0.3
+accuracy:0.51
+
+TEST SET- MIN WEIGHT FRACTION LEAF 0.3
+accuracy:0.5
+
+-----------------------------
+
+TRAIN SET- PRESORT True, MAX DEPTH 4
+accuracy:0.76
+
+TEST SET- PRESORT True, MAX DEPTH 4
+accuracy:0.72
+
