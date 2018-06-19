@@ -31,7 +31,7 @@ def create_baseline():
 
 
 estimator = KerasClassifier(
-    build_fn=create_baseline, epochs=3, verbose=True)
+    build_fn=create_baseline, epochs=30, verbose=True)
 
 
 estimator.fit(X_train, Y_train)

@@ -17,7 +17,8 @@ def create_baseline():
     # stworzenie modelu sieci neuronowej
     model = Sequential()
     # dodanie jednego neuronu, wejście do tego neuronu to ilość cech, funkcja aktywacji sigmoid, początkowe wartości wektorów to zero.
-    model.add(Dense(1, input_dim=X_train.shape[1], activation='sigmoid', kernel_initializer='zeros'))
+    model.add(Dense(3, input_dim=X_train.shape[1], activation='relu', kernel_initializer='normal'))
+    model.add(Dense(1, activation='sigmoid', kernel_initializer='normal'))
     # stworzenie funkcji kosztu stochastic gradient descent
     #sgd = optimizers.SGD(lr=0.1)
     # kompilacja modelu
@@ -31,7 +32,7 @@ def create_baseline():
 
 
 estimator = KerasClassifier(
-    build_fn=create_baseline, epochs=3, verbose=True)
+    build_fn=create_baseline, epochs=5, verbose=True)
 
 
 estimator.fit(X_train, Y_train)
